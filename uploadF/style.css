@@ -1,0 +1,33 @@
+/* Styles the label to look like a button */
+label {
+    border-radius: 8px;
+    height: 30px;
+    width: 120px; /* Text will be cut off if it exceeds this width */
+    background-color: rgb(52, 231, 171);
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    
+    /* Centering and layout */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    
+    /* --- Add these three properties --- */
+    white-space: nowrap;      /* Keeps the text on a single line */
+    overflow: hidden;         /* Hides the text that overflows the width */
+    text-overflow: ellipsis;  /* Adds "..." to show the text is cut off */
+    padding: 0 10px;          /* Add some padding so text isn't against the edge */
+}
+
+/* Hide the default file input */
+#upload {
+    visibility: hidden;
+    position: absolute;
+}
+
+label:hover {
+    background-color: rgb(40, 190, 140);
+}
