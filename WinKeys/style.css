@@ -1,0 +1,3 @@
+@import url(https://fonts.googleapis.com/css?family=Gidole:regular);
+body{height: 100%;width: 100%;padding: 0;margin: 0;box-sizing: border-box;background-color: #222;}
+div{font-family:gidole;height: 100vh;width: 100%;background-color: #222;display: flex;justify-content: center;align-items: center;font-size: 400px;font-weight: 100;color: #706f6f;}
