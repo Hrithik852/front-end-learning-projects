@@ -20,7 +20,9 @@ function append() {
     const btn = newElm.querySelector(".btn");
     let event = container.querySelector(".active");
     event.textContent = `Events active:${document.getElementsByClassName("try").length}`;
-    btn.addEventListener("submit", () => {
+    btn.addEventListener("click", () => {
+      console.log("haha");
+      console.log(newElm);
       newElm.remove();
       event.textContent = `Events active:${document.getElementsByClassName("try").length}`;
     });
