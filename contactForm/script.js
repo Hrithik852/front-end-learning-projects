@@ -9,6 +9,8 @@ let valid;
       if(Name.value.trim().length<3){
        nameerror.textContent="name should be more than 2 characters";
        document.getElementById("nameerror").style.display="block";
+       document.getElementById("name").style.border="1px solid red";
+
        valid=false;
     }
 else{nameerror.textContent="";
@@ -25,6 +27,8 @@ else{nameerror.textContent="";
       else{
         emailerror.textContent="email is invalid";
         document.getElementById("emailerror").style.display="block";
+       document.getElementById("email").style.border="1px solid red";
+
        valid=false;
       }
       if(valid){
