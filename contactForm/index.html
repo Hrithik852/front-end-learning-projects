@@ -9,9 +9,11 @@
 <body>
     <h1 class="heading">CONTACT FORM</h1>
     <form>
-        <input autocomplete="off" required type="text" name="name" id="name" placeholder="enter your name">
-        <input autocomplete="email" required type="email" name="email" id="email" placeholder="enter yout email">
-        <textarea reu' name="message" id="message" placeholder="enter your message"></textarea>
+        <input autocomplete="off" class="input"  type="text" name="name" id="name" placeholder="enter your name">
+        <small class="nameerror" id="nameerror">hh</small>
+        <input autocomplete="email" id="email"  class="input"   type="email" name="email" id="email" placeholder="enter yout email">
+        <small id="emailerror" class="emailerror">hahah</small>
+        <textarea required minlength="10" name="message" id="message" placeholder="enter your message"></textarea>
         <input type="submit" value="submit" id="submit">
     </form>
     <script src="script.js"></script>
