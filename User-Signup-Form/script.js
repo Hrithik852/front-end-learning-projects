@@ -35,6 +35,7 @@ form.addEventListener("submit",(e)=>{e.preventDefault();
  if(i>=4&&isValid){
     All_inputs.forEach(e=>e.value="");
  }
+ else{ alert("missed inputs")}
 })
 UserName.addEventListener("blur",(e)=>{
    
@@ -62,7 +63,7 @@ email.addEventListener("blur",(e)=>{e.preventDefault()
         text="enter a valid email";
     }
     validity_check(isValid,email,text);
-    isValid=false;
+ 
 
 
 })
@@ -81,7 +82,7 @@ password.addEventListener("blur",(e)=>{e.preventDefault();
         text="password is invalid"
     }
    validity_check(isValid,password,text);
-   isValid=false;
+
 
 
 })
