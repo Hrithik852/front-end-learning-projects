@@ -7,3 +7,22 @@ const name_regex=/^[a-zA-Z]+(?:[' -][a-zA-Z]+)*$/;
 const ph_regex=/^(?:(?:\+91)|0)?[ -]?[6789]\d{9}$/;
 const no_of_tickets_regex=/^[1-5]$/;
 form.addEventListener("submit",(e)=>{e.preventDefault();})
+function ifError(){
+
+}
+function ifSuccess(){
+    
+}
+function namecheck(){
+   
+}
+function numbercheck(){
+   
+}
+function ticketscheck(){
+   
+}
+name.addEventListener("blur",namecheck);
+number.addEventListener("blur",numbercheck);
+tickets.addEventListener("blur",ticketscheck);
+
