@@ -68,7 +68,7 @@ animation: liftoff 2s  both;
     80%{
         translate: 0 -140%;
     }
-    100%{translate: 0 -270%;}
+    100%{translate: 0 -300%;}
 }
 .reload{
 
