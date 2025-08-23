@@ -31,7 +31,7 @@ timeup.classList.remove("display")
 btn.addEventListener("click",()=>{
     clearTimeout(timeout);
     clearInterval(timer)
-if(checkSelectedRadio()=="elephant")
+if(checkSelectedRadio()=="whale")
                 {
                    ans.textContent="right"
                 }
