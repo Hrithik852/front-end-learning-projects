@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body> <h2 class="timeleft">Time left:<span>15</span> sec</h2><h2 class="q">QUIZ</h2>
+<body> <h2 class="timeleft">Time left:<span class="a">15</span> sec</h2><h2 class="q">QUIZ</h2>
    
     <div class="container">
         <div class="qstn">what is the largest maamal in the world</div>
@@ -16,7 +16,12 @@
           <label for="elephant"><input type="radio" name="answer" value="elephant" id="elephant">elephant</label>
            <label for="lion"><input type="radio" name="answer" value="lion" id="lion">lion</label>
         </div>
-        <button>submit</button>
+        <button class="btn">submit</button>
     </div>
+    <div class="cont display"><h2 class="right-answer">the answer is:<span class="b">no options selected</span></h2></div>
+    <div class="timeup display">times up!!
+        <button class="tu">refresh</button>
+    </div>
+<script src="script.js"></script>
 </body>
 </html>
