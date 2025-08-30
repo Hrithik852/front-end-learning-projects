@@ -1,14 +1,11 @@
 let left = document.querySelector(".left");
 let right = document.querySelector(".right");
 let img = document.querySelector(".frame").querySelectorAll("img");
-ImgLength = Math.floor(img.length / 2);
-MImgLength = Math.round(0 - img.length / 2);
-buttons = document.querySelectorAll("button");
-
-let newB = buttons[2];
-let i = ImgLength;
-console.log(MImgLength)
-
+let buttons = document.querySelectorAll("button");
+console.log(buttons)
+buttons[0].style.background="white";
+let index=0;
+let translate=0;;
 function toggleTransition(a) {
     if (a == true) {
         left.classList.add('active');
@@ -22,93 +19,69 @@ function toggleTransition(a) {
 
     }, 1000); 
 }
-let digit = 0;
-let TransLate = 0;
-function TL() {
-    TransLate += 750;
-    img.forEach(e => { e.style.translate = `${TransLate}px` })
 
-}
-function leftSlide() {
-    if (digit <= ImgLength && digit > MImgLength) {
-        TL();
-        digit--;
-    }
-}
 
-function rightSlide() {
-
-    if (digit < ImgLength) {
-        TransLate -= 750;
-        img.forEach(e => { e.style.translate = `${TransLate}px` })
-        digit++;
-
-        console.log(digit);
-    }
-}
 left.addEventListener("click", () => {
     toggleTransition(true);
-    leftSlide();
-    if (i > 0) {
-        i--;
-    }
-    console.log(i);
-
-
-
-    newB = buttons[i];
-    bb()
-    
+if(index>0){
+    --index;
+}
+else{
+    index=img.length-1;
+}
+    console.log(index);
+    startOrResetInterval()
+ ImageSlider();
 })
 
 right.addEventListener("click", () => {
     toggleTransition(false);
+    if(index<img.length-1){
+    ++index;
+}
+else{
+    index=0;
+}
+console.log(index);
 
-    rightSlide();
-    if (i < buttons.length - 1) {
-        i++;
-    }
-    console.log(i);
-
-
-    newB = buttons[i];
-    bb();
+startOrResetInterval();
+ ImageSlider();
    
 })
+let ImageSlider=()=>{
+    if(index==0){
+img.forEach(e=>{e.style.translate=`${0}px`})
 
-newB.style.background = "white"
-
-console.log(newB)
-buttons.forEach(e => { e.addEventListener("click", () => { newB = e; }) })
-console.log(buttons);
-
-function bb() {
-    buttons.forEach(e => {
-        e.style.background = "none"
-        newB.style.background = "white";
-    })
-}
-document.querySelector(".buttons").addEventListener("click", () => {
-    bb();
+    }
+    else{
+img.forEach(e=>{e.style.translate=`${translate=index*-750}px`})
+    }
     
+    buttons.forEach(e=>{e.style.background="none";})
+  buttons[index].style.background="white";
+
+
 }
-)
-
-
-
-const slideButtons = document.querySelectorAll("button");
-
-const centerIndex = ImgLength; 
-
-slideButtons.forEach((button, index) => {
-    button.addEventListener("click", () => {
-        i = index;
-
-        digit = index - centerIndex; 
-        
-        TransLate = (centerIndex - index) * 750; 
-        img.forEach(e => {
-            e.style.translate = `${TransLate}px`;
-        });
-    });
-});
+let auto=()=>{
+    
+   if(index<img.length-1){
+    ++index;
+}
+else{
+    index=0;
+}
+ImageSlider();
+console.log("index="+index)
+}
+let autoSlide=setInterval(auto,3000)
+function startOrResetInterval() {
+    if (autoSlide) {
+        clearInterval(autoSlide);
+        console.log("Interval reset.");
+    }
+    autoSlide = setInterval(
+        auto
+    , 3000); 
+}
+buttons.forEach(e=>{
+  e.addEventListener("click",()=>{index=e.value;ImageSlider();startOrResetInterval();});})

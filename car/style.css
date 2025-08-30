@@ -1,62 +1,85 @@
-*{margin: 0;padding: 0;box-sizing: border-box;}
-body{
-    background-color: #222;
-    display: flex;
-    justify-content: center;
-    align-items: center;width: 100%;
-    height: 100vh;
-    overflow: hidden;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.container{
-    width: 100%;
-     display: flex;
-     
-    justify-content: center;
-    align-items: center;
+body {
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
-.left{flex-shrink: 10;}
-.right{flex-shrink: 10;}
-.frame{
-    flex-shrink: 1;
-    height: 500px;
-    width: 750px;display: flex;
-    justify-content: center;
-    align-items: center;
-    object-fit: cover;overflow: hidden;
-    border-radius: 20px;
-    min-width: 500px;
-   
-}
-.frame img{
-    height: 500px;
-    width: 750px;
-     transition: translate 2s ease ;
-}
-.left img{
-rotate: 180deg;cursor: pointer;height: 100px;
-}
-.right img{cursor: pointer;height: 100px;}
+.container {
+  width: 100%;
+  display: flex;
 
+  justify-content: center;
+  align-items: center;
+}
+.left {
+  flex-shrink: 10;
+}
+.right {
+  flex-shrink: 10;
+}
+.frame {
+  flex-shrink: 1;
+  height: 500px;
+  width: 750px;
+  display: flex;
+  justify-content: start;
+  overflow: hidden;
+  align-items: center;
+  object-fit: cover;
+  border-radius: 20px;
+  min-width: 500px;
+}
+.frame img {
+  height: 500px;
+  width: 750px;
+  transition: translate 2s ease;
+}
+.left img {
+  rotate: 180deg;
+  cursor: pointer;
+  height: 100px;
+}
+.right img {
+  cursor: pointer;
+  height: 100px;
+}
 
 .left.active {
-    transition: all ease-out 1s;
- translate: -20px;/* Scale up the div */
+  transition: all ease-out 1s;
+  translate: -20px; /* Scale up the div */
 }
-.right.active{
-     transition: all ease-out 1s;
- translate: 20px;
+.right.active {
+  transition: all ease-out 1s;
+  translate: 20px;
 }
 
-button{
-    height: 15px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    border:.5px solid white;
-    background: none;
-
+button {
+  height: 15px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 0.5px solid white;
+  background: none;
 }
-.bg{background-color: red;}
+.bg {
+  background-color: red;
+}
 
-.buttons{display: flex;gap: 20px;
-width: 100%;position: absolute;
-justify-content: center;margin-bottom: -560px;}
+.buttons {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  position: absolute;
+  justify-content: center;
+  margin-bottom: -560px;
+}
+.color{
+    background-color: white;
+}
