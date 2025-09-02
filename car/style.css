@@ -67,6 +67,7 @@ button {
   border-radius: 50%;
   border: 0.5px solid white;
   background: none;
+  cursor: pointer;
 }
 .bg {
   background-color: red;

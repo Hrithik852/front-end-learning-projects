@@ -1,0 +1,37 @@
+*{padding: 0;margin: 0;box-sizing: border-box;}
+body{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+.toggle{
+    height: 40px;
+    width: 110px;
+    background-color: #222;
+    padding-top: 10px;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 13px;
+    cursor: pointer;
+    user-select: none;
+    
+}
+.white{
+     background-color:  #ffffff;
+    color:black;
+
+}
+.toggle:active{
+    scale: 1.05;
+}
+body.dark{
+    background-color: #222;
+
+}
+.dark .toggle{
+    background-color: #f5f5f5;
+    color: black;
+}
