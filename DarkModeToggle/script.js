@@ -4,10 +4,6 @@ if(localStorage.getItem("theme")=="dark")
     document.body.classList.add("dark");
     console.log(localStorage.getItem("theme"))
 }
-else{
-    console.log(localStorage.getItem("theme"))
-    document.body.classList.add("white")
-}
 btn.addEventListener("click",()=>{
 
     document.body.classList.toggle("dark");
@@ -16,7 +12,6 @@ btn.addEventListener("click",()=>{
         localStorage.setItem("theme","dark");        
     }
     else{
-        localStorage.setItem("theme","white");        
-
+        localStorage.setItem("theme","white");
     }
 })
