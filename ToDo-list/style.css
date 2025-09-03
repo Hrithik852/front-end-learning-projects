@@ -1,45 +1,59 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
-*{padding: 0;margin: 0;box-sizing: border-box;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     font-family: montserrat;
 }
-body{
-background-color: #222;
-display: flex;
-flex-direction: column;
-align-items: center;
-min-height: 100vh;
-width: 100%;
+
+body {
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
 }
-.linethrough{
+
+.linethrough {
     text-decoration: line-through;
     color: gray;
 }
-h1{
+
+h1 {
     text-decoration: underline;
     margin-top: 10px;
-   color: white;
+    color: white;
 }
-body div{height: auto;}
-form{
+
+body div {
+    height: auto;
+}
+
+form {
     height: 50px;
     padding: 10px;
     display: flex;
-gap: 10px;}
-input{width: 250px;
-padding: 10px;border-radius: 5px;
-border: none;}
-button{
+    gap: 10px;
+}
+
+input {
+    width: 250px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
     padding: 5px;
     background-color: rgb(147, 255, 147);
     border: none;
     border-radius: 8px;
     cursor: pointer;
-     @media screen and (max-width:420px) {
-    font-size: .5em;
-    
-    }
 }
-.container{
+
+.container {
     position: relative;
     margin-top: 30px;
     background-color: #f5f5f5;
@@ -49,58 +63,86 @@ button{
     flex-direction: column;
     align-items: center;
     border-radius: 20px;
-   padding: 50px;
-   min-width: 300px;
+    padding: 50px;
+    min-width: 300px;
+}
 
-    @media screen and (max-width:420px) {
-    font-size: 1em;
-        width: 350px;
-    }
-}
-.container ul{
+.container ul {
     width: 100%;
-     list-style: none;
-     margin-top: 10px;
+    list-style: none;
+    margin-top: 10px;
 }
-ul li{
+
+ul li {
     width: 100%;
     display: flex;
     align-items: center;
-padding-left: 10px;
-margin: 20px;
-height: 40px;
-background-color: white;
-position: relative;
-border-radius: 5px;
-border: .5px solid black;
- @media screen and (max-width:420px) {
-   margin-left: 0;
-    }
+    padding-left: 10px;
+    margin: 20px;
+    height: 40px;
+    background-color: white;
+    position: relative;
+    border-radius: 5px;
+    border: .5px solid black;
 }
-p{
+
+p {
     user-select: none;
     cursor: pointer;
 }
-[a],[b]{
-    position: absolute;
-    top:100px;
-}
-[a]{
-    left:15%
 
+.a, .b {
+    position: absolute;
+    top: 100px;
 }
-[b]{
-    
+
+.a {
+    left: 15%
+}
+
+.b {
     right: 30px;
 }
-li button{
+
+li button {
     position: absolute;
-right: 0;
-margin: 10px;
-border-radius: 5px;
-font-weight: 500;
- @media screen and (max-width:420px) {
-    font-size:
-       .8em;
+    right: 0;
+    margin: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+
+@media screen and (max-width:420px) {
+    button {
+        font-size: .5em;
     }
+    .container {
+        font-size: 1em;
+        width: 350px;
+    }
+    ul li {
+        margin-left: 0;
+    }
+    li button {
+        font-size: .8em;
+    }
+    .remove-everything{
+        height: 30px;
+        width: 70px;
+    }
+}
+.remove-everything{
+    height: 40px;
+    width: 100px;
+    background-color: red;
+    color: black;
+    font-weight: bold;
+    font-size: 10px;
+    padding: 5px;
+    padding-top: 0px;
+    position:absolute;
+    right: 5px;
+    border-radius: 5px;
+    top:6px;
 }

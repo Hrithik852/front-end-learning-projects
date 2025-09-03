@@ -3,12 +3,12 @@ let input = document.querySelector("#input")
 let container = document.querySelector(".container");
 let ul = document.querySelector("ul");
 let button = document.querySelector(".formbtn");
-let taskleft = document.querySelector(".a");
-let taskcompleted=document.querySelector(".b")
+let taskleft = document.querySelector(".taskleft");
+let taskcompleted=document.querySelector(".taskcompleted")
 let strarr=[];
+let re=document.querySelector(".remove-everything")
 
-
-
+re.addEventListener("click",()=>{localStorage.clear();window.location.reload()})
 if(localStorage.getItem("task"))
 {
   strarr=JSON.parse(localStorage.getItem("task"))
