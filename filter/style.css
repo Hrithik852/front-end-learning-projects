@@ -1,0 +1,103 @@
+@import url(https://fonts.googleapis.com/css?family=Asta+Sans:300,regular,500,600,700,800);
+*{padding: 0;margin: 0;box-sizing: border-box;font-family:Asta Sans;}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+gap:30px;
+overflow-x:hidden ;
+}
+h1{
+    color: white;
+    margin-top: 20px;
+}
+.container{
+width: 1100px;
+height: 600px;
+display: flex;
+flex-direction: column;
+align-items: center;gap: 50px;}
+.container .cards{
+
+   
+    height: 400px;
+    width: 100%;
+
+}
+#search{
+    border:none;
+background-color: #f5f5f5;
+width: 200px;
+padding: 5px;
+border-radius: 5px;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    width: 100%;
+    max-width: 1400px;
+    justify-content: center;
+}
+
+/* --- Individual Card Styling --- */
+.card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    width: 300px;
+    /* A subtle shadow for depth */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    text-align: center;
+
+    /* Smooth transition for hover effects */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Card Hover Effect --- */
+/* Lifts the card and adds a more pronounced shadow on hover */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Profile Image --- */
+.card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Prevents image stretching */
+    align-self: center;
+    margin-bottom: 20px;
+    border: 5px solid #e9ecef;
+}
+
+/* --- Username (h2) --- */
+.card h2 {
+    margin: 0 0 5px 0;
+    font-size: 1.5em; /* 24px */
+    font-weight: 600;
+    color: #212529;
+}
+
+/* --- Age Info --- */
+.card .age {
+    margin: 0 0 15px 0;
+    font-size: 0.9em; /* 14.4px */
+    color: #6c757d; /* A muted gray for secondary text */
+    font-weight: 500;
+}
+
+/* --- Description Text --- */
+.card .description {
+    font-size: 1em; /* 16px */
+    line-height: 1.6;
+    color: #495057;
+    /* Pushes the description down, filling available space */
+    margin-top: auto; 
+}
