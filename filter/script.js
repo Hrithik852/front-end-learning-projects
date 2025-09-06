@@ -1,3 +1,4 @@
+
 const users = [
   { 
     username: 'alex_hales', 
@@ -60,36 +61,32 @@ const users = [
     age: 52 
   }
 ];
+let cards=document.getElementById("cards");
+let input=document.getElementById("search")
+function displayCards(user){
+cards.innerHTML="";
 
-const input = document.getElementById("search");
-const cardsContainer = document.getElementById('cards');
+user.forEach(e => {
+  const card=document.createElement("div");
+card.className="card";
 
-function displayUsers(usersToDisplay) {
-    cardsContainer.innerHTML = '';
-
-    usersToDisplay.forEach(user => {
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.innerHTML = `
-            <img src="${user.image}" alt="${user.username}'s profile picture">
-            <h2>${user.username}</h2>
-            <p class="age">Age: ${user.age}</p>
-            <p class="description">${user.description}</p>
-        `;
-        cardsContainer.appendChild(card);
-    });
-}
-
-input.addEventListener("input", () => {
-    const obj = input.value.toLowerCase().trim();
-
-    const filteredUsers = users.filter(user => {
-        return user.username.toLowerCase().startsWith(obj);
-    });
-
-    console.log(filteredUsers)
-    displayUsers(filteredUsers);
+card.innerHTML=`
+<img src=${e.image} alt="userimage">
+            <h2>${e.username}</h2>
+            <p class="age">${e.age}</p>
+            <p class="description">${e.description}</p>
+        `
+cards.appendChild(card)
 });
+}
+input.addEventListener("input",()=>{
+ 
+let user=input.value.toLowerCase().trim();
+let filter=users.filter(e=>{
+  return e.username.startsWith(user);
+})
+console.log(user);
+displayCards(filter);
 
-
-displayUsers(users);
+})
+displayCards(users);
